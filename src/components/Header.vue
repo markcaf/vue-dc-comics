@@ -6,16 +6,11 @@
             </div>
 
             <ul class="list-unstyled">
-                <li>Characters</li>
-                <li class="active_link">Comics</li>
-                <li>Movies</li>
-                <li>TV</li>
-                <li>Games</li>
-                <li>Collectibles</li>
-                <li>Videos</li>
-                <li>Fans</li>
-                <li>News</li>
-                <li>Shop</li>
+                <li v-for="(link, index) in headerLinks" :key="index">
+                    <a :class="{'active_link' : link.current}" :href="link.url">
+                        {{ link.text }}
+                    </a>
+                </li>
             </ul>
         </nav>
     </header>
@@ -24,6 +19,73 @@
 <script>
 export default {
   name: "Header",
+
+  data:function(){
+    return{
+        headerLinks:[
+            {
+                text: 'Characters',
+                url: '#',
+                current: false,
+            },
+
+            {
+                text: 'Comics',
+                url: '#',
+                current: true,
+            },
+
+            {
+                text: 'Movies',
+                url: '#',
+                current: false,
+            },
+            
+            {
+                text: 'TV',
+                url: '#',
+                current: false,
+            },
+            
+            {
+                text: 'Games',
+                url: '#',
+                current: false,
+            },
+            
+            {
+                text: 'Collectibles',
+                url: '#',
+                current: false,
+            },
+            
+            {
+                text: 'Videos',
+                url: '#',
+                current: false,
+            },
+            
+            {
+                text: 'Fans',
+                url: '#',
+                current: false,
+            },
+            
+            {
+                text: 'News',
+                url: '#',
+                current: false,
+            },
+            
+            {
+                text: 'Shop',
+                url: '#',
+                current: false,
+            },
+            
+        ],
+    }
+  }
 };
 </script>
 
@@ -42,8 +104,18 @@ export default {
             color: #534f49;
             font-stretch: extra-condensed;
 
-            &.active_link{
+            a{
+                text-decoration: none;
+                color: #534f49;
+                cursor: pointer;
+
+                &.active_link{
                 color: $brandColor;
+                }
+
+                &:hover{
+                color: $brandColor;
+                }
             }
         }
     }
