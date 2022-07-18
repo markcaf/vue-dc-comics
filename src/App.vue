@@ -2,6 +2,7 @@
   <div id="app">
     <Header/>
     <Main/>
+    <MarketDC/>
     <Footer/>
   </div>
 </template>
@@ -10,12 +11,14 @@
 import Header from './components/Header.vue';
 import Main from './components/Main.vue';
 import Footer from './components/Footer.vue';
+import MarketDC from './components/MarketDC.vue';
 
 export default {
   name: 'App',
   components: {
     Header,
     Main,
+    MarketDC,
     Footer,
   }
 }
