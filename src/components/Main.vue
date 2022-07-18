@@ -10,68 +10,15 @@
             <div class="row">
                 <div class="col-12 py-5 comics-container d-flex flex-wrap">
 
-                    <div class="comic mb-5">
+                    <div class="comic mb-5" v-for="(comic, index) in comicsCards" :key="index">
                         <div class="image-container">
-                            <img class="comic-cover" src="https://www.dccomics.com/sites/default/files/styles/covers192x291/public/comic-covers/2018/09/AC1000_DLX_162-001_HD_5ba13723281ab0.37845353.jpg?itok=ZsI-C5eX" alt="">
+                            <img class="comic-cover" :src="comic.thumb" :alt="comic.series">
                         </div>
                         <div class="title text-white text-uppercase mt-3">
-                            Action Comics
+                            {{ comic.series }}
                         </div>
                     </div>
 
-                    <div class="comic mb-5">
-                        <div class="image-container">
-                            <img class="comic-cover" src="https://www.dccomics.com/sites/default/files/styles/covers192x291/public/comic-covers/2018/09/AC1000_DLX_162-001_HD_5ba13723281ab0.37845353.jpg?itok=ZsI-C5eX" alt="">
-                        </div>
-                        <div class="title text-white text-uppercase mt-3">
-                            Action Comics
-                        </div>
-                    </div>
-
-                    <div class="comic mb-5">
-                        <div class="image-container">
-                            <img class="comic-cover" src="https://www.dccomics.com/sites/default/files/styles/covers192x291/public/comic-covers/2018/09/AC1000_DLX_162-001_HD_5ba13723281ab0.37845353.jpg?itok=ZsI-C5eX" alt="">
-                        </div>
-                        <div class="title text-white text-uppercase mt-3">
-                            Action Comics
-                        </div>
-                    </div>
-
-                    <div class="comic mb-5">
-                        <div class="image-container">
-                            <img class="comic-cover" src="https://www.dccomics.com/sites/default/files/styles/covers192x291/public/comic-covers/2018/09/AC1000_DLX_162-001_HD_5ba13723281ab0.37845353.jpg?itok=ZsI-C5eX" alt="">
-                        </div>
-                        <div class="title text-white text-uppercase mt-3">
-                            Action Comics
-                        </div>
-                    </div>
-
-                    <div class="comic mb-5">
-                        <div class="image-container">
-                            <img class="comic-cover" src="https://www.dccomics.com/sites/default/files/styles/covers192x291/public/comic-covers/2018/09/AC1000_DLX_162-001_HD_5ba13723281ab0.37845353.jpg?itok=ZsI-C5eX" alt="">
-                        </div>
-                        <div class="title text-white text-uppercase mt-3">
-                            Action Comics
-                        </div>
-                    </div>
-                    
-                    <div class="comic mb-5">
-                        <div class="image-container">
-                            <img class="comic-cover" src="https://www.dccomics.com/sites/default/files/styles/covers192x291/public/comic-covers/2018/09/AC1000_DLX_162-001_HD_5ba13723281ab0.37845353.jpg?itok=ZsI-C5eX" alt="">
-                        </div>
-                        <div class="title text-white text-uppercase mt-3">
-                            Action Comics
-                        </div>
-                    </div>
-
-                    <div class="comic mb-5">
-                        <div class="image-container">
-                            <img class="comic-cover" src="https://www.dccomics.com/sites/default/files/styles/covers192x291/public/comic-covers/2018/09/AC1000_DLX_162-001_HD_5ba13723281ab0.37845353.jpg?itok=ZsI-C5eX" alt="">
-                        </div>
-                        <div class="title text-white text-uppercase mt-3">
-                            Action Comics
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
