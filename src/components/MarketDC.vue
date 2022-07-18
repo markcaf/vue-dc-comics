@@ -1,5 +1,5 @@
 <template>
-  <section class="py-4">
+  <section class="py-5">
     <nav class="d-flex justify-content-center gap-5">
         <ul class="list-unstyled">
             <li>
