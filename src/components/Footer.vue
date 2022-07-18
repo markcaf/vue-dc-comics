@@ -36,7 +36,7 @@
       </div>
     </div>
 
-    <div class="footer-social py-5">
+    <div class="footer-social py-4">
       <div class="container d-flex justify-content-between">
         <div class="cta-button text-white">SIGN-UP NOW!</div>
 
