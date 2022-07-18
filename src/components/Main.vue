@@ -9,27 +9,34 @@
 
             <div class="row">
                 <div class="col-12 py-5 comics-container d-flex flex-wrap">
+                    <cardComic v-for="(comic, index) in comicsCards" :key="index"
+                    :imageUrl="comic.thumb"
+                    :title="comic.series"
+                    />
+                </div>
+            </div>
 
-                    <div class="comic mb-5" v-for="(comic, index) in comicsCards" :key="index">
-                        <div class="image-container">
-                            <img class="comic-cover" :src="comic.thumb" :alt="comic.series">
-                        </div>
-                        <div class="title text-white text-uppercase mt-3">
-                            {{ comic.series }}
-                        </div>
+            <div class="row">
+                <div class="col text-center d-flex justify-content-center">
+                    <div class="load-more text-white py-2 mb-5">
+                        LOAD MORE
                     </div>
-
                 </div>
             </div>
         </div>
 
     </main>
-  
 </template>
 
 <script>
+import cardComic from './cardComic.vue';
+
 export default {
     name: "Main",
+
+    components:{
+        cardComic,
+    },
 
     data: function () {
         return {
@@ -134,28 +141,16 @@ export default {
 
         .comics-container{
             margin: auto;
+        }  
 
-            .comic{
-            width: calc(100% / 6);
-
-                .image-container{
-                    height: 192px;
-                    width: 192px;
-
-                    img.comic-cover{
-                        height: 100%;
-                        width: 100%;
-                        object-fit: cover;
-                        object-position: top;
-                    }
-                }
-
-                .title{
-                    font-size: 14px;
-                }
-            }
+        .load-more{
+            background-color: $brandColor;
+            width: 200px;
+            font-weight: bold;
+            font-stretch: ultra-condensed;
+            margin-top: -40px;
+            cursor: pointer;
         }
-        
     }
 
 </style>
